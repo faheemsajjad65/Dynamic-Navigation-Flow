@@ -33,22 +33,20 @@ And allow you to have different implementation of each function in the different
 To speed up things we provide below are the urls that will give tou the information about [Time tracking methods](https://developer.mixpanel.com/docs/react-native#timing-events) and the concept of [Super properties](https://help.mixpanel.com/hc/en-us/articles/360001355266-Event-Properties#super-properties-for-events).
 
 
-| Tracking Platform  |  Question to Answer |  
-|:-:|:-:|:-:|:-:|:-:|
-|  Mixpanel |  How much time users spent on each view |   
-|  Mixpanel |  What is the conversion rate to “Screen F” of the different experiment variants (A and B) | 
-|  Mixpanel |  Which is the percentage of each selected option on the “Screen A” or “Screen B”  |  
-|  AppsFlyer |  New Installations  |  
-|  AppsFlyer |  Launches  |   
-|  AppsFlyer |  How many users reach "Screen F"  |   
+Please answer as many questions as possible:
 
-
+- Mixpanel Q1: How much time users spent on each view?
+- Mixpanel Q2: What is the conversion rate to “Screen F” of the different experiment variants (A and B)
+- Mixpanel Q3: Which is the percentage of each selected option on the “Screen A” or “Screen B”
+- AppsFlyer Q1: New Installations
+- AppsFlyer Q2: Launches
+- AppsFlyer Q3: How many users reach "Screen F" 
 
 ### Tips
 
 - Track the experiment variant as a super (event) property, once, when the experiment is loaded
 - Track all the page visits suggestion Event: "Visited Page", Property: "Page Name"
-- Track all the button clicks Event: "Clicked Button", Properties: "Page Name", "Button Name" https://en.wikipedia.org/wiki/Flute
+- Track all the button clicks Event: "Clicked Button", Properties: "Page Name", "Button Name"
 
 
 ### Results
