@@ -7,24 +7,50 @@ Please read the [root readme file](https://github.com/Learnfield-GmbH/CodingChal
 ## The exercise
 
 Given this existing React Native application which we are providing, you would need to implement the Tracking SDKs of :
-1. Mixpanel for both iOS and Android
-2. AppsFlyer for iOS
+1. Mixpanel
+2. AppsFlyer
 
-You can decide to choose either some existing React Native wrapper or do a manual implementation.
+it is suggested to use an existing module which is officially supported by those tools 
+
+## Introduction to the App Functionality
+This is a simple React Native application that allows navigation to 3 screens.
+Screen number 1: Is the main screen and it loads an experiment
+Screen number 2: Can be "Screen A" or "Screen B" this depends based on the previously loaded experiment
+Screen number 3: Displayed after you have interacted with Screen nº2 and returned to the app
 
 ### Goal
-of this exercise is to **answer** as much as possible from the following questions:
+of this exercise is create an interface layer between the App and the 3rd party Tracking Services. 
 
-1. Mixpanel
-    - How much time users spent on each view
-    - What is the conversion rate to “Screen F” of the different experiment variants (A and B)
-    - Which is the percentage of each selected option on the “Screen A” or “Screen B” 
-    - You can select how to design the events and properties
-    - Use your name as a value to a “Super Property” called “Candidate”
-2. AppsFlyer
-    - How many users have been acquired from `[your_name]_LAT_enabled` campaign
-    - How many users have been acquired from `[your_name]_LAT_disabled` campaign
-    
+Interface should support for the following methods:
+- SDK Initialisation
+- Event Tracking
+- Time Tracking
+- Properties Tracking
+  - user properts and/or super properties
+
+And allow you to have different implementation of each function in the different tracking services.
+
+To speed up things we provide below are the urls that will give tou the information about [Time tracking methods](https://developer.mixpanel.com/docs/react-native#timing-events) and the concept of [Super properties](https://help.mixpanel.com/hc/en-us/articles/360001355266-Event-Properties#super-properties-for-events).
+
+
+| Tracking Platform  |  Question to Answer |  
+|:-:|:-:|:-:|:-:|:-:|
+|  Mixpanel |  How much time users spent on each view |   
+|  Mixpanel |  What is the conversion rate to “Screen F” of the different experiment variants (A and B) | 
+|  Mixpanel |  Which is the percentage of each selected option on the “Screen A” or “Screen B”  |  
+|  AppsFlyer |  New Installations  |  
+|  AppsFlyer |  Launches  |   
+|  AppsFlyer |  How many users reach "Screen F"  |   
+
+
+
+### Tips
+
+- Track the experiment variant as a super (event) property, once, when the experiment is loaded
+- Track all the page visits suggestion Event: "Visited Page", Property: "Page Name"
+- Track all the button clicks Event: "Clicked Button", Properties: "Page Name", "Button Name" https://en.wikipedia.org/wiki/Flute
+
+
 ### Results
 
 of this exercise should be delivered in two ways:
@@ -56,3 +82,8 @@ https://hq1.appsflyer.com/unified-ltv/dashboard/id1430088267). The keys that you
 - iOS:
   * `cd tracking\ implementation/ && npx react-native run-ios` ***or*** open `tracking\ implementation/ios/skoovesCodingChallenge.xcworkspace` in Xcode ***or*** run `xed -b ios`
   * Click on the Run button
+
+
+## Troubleshooting
+- Make sure the packager is running
+- Make sure you have installed all the node modules

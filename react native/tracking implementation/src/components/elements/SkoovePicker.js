@@ -9,8 +9,11 @@ import {
 } from 'react-native';
 
 const onItemPick = (navigation, url) => {
-  Linking.openURL(url);
-  navigation.navigate('Final');
+  Linking.openURL(url)
+    .then(reponse => navigation.navigate('Final'))
+    .catch(error => {
+      console.error('user cancelled');
+    });
 };
 
 const PickerItem = ({navigation, title, url}) => (
