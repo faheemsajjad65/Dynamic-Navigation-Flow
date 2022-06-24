@@ -1,4 +1,4 @@
-# Skoove Coding Challange
+# Skoove Coding Challenge
 
 ## The following rules apply:
 
@@ -6,7 +6,7 @@ Please read the [root readme file](https://github.com/Learnfield-GmbH/CodingChal
 
 ## The exercise
 
-This consists of several parts. The UI is rendered in a React Native application while some audio playback is done on the Native side. The application is able to load data from a server and playback the associated audio content.
+The application is able to load data from a server and playback the associated audio content.
 
 ### React Native Part
 
@@ -21,6 +21,8 @@ This consists of several parts. The UI is rendered in a React Native application
 
 ### Native Part 
 
+If agreed, feel free to choose an appropriate 3rd party node module that offers the required functionality instead of implementing the functionality yourself.
+
 5. Load, play, pause the given audio file
 6. Notify the React Native part about play position updates<sup>2</sup>
 
@@ -28,7 +30,7 @@ This consists of several parts. The UI is rendered in a React Native application
 
 <sup>1</sup>You can find the [manifest file here](data/manifest.json)
 
-<sup>2</sup>Update the value at an appropiate frequency
+<sup>2</sup>Update the value at an appropriate frequency
 
 ### User Interface Mockup
 ![Simple audio player mockup][Simple audio player mockup]
