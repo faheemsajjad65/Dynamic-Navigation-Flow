@@ -19,3 +19,7 @@
 1. [Simple Audio Player](react%20native/simple%20audio%20player/README.md)
 2. [Dynamic Navigation Flow](react%20native/navigation%20flow/README.md)
 3. [Tracking Implementation](react%20native/tracking%20implementation/README.md)
+
+## Important notes
+
+If your efforts exceed ~6 hours of work by a significant amount of work, please feel free to cut the task down into meaningful splits and document what's left, and how you would approach this.
