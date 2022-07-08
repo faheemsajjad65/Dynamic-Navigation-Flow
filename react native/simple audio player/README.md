@@ -20,7 +20,7 @@ The application is able to load data from a server and playback the associated a
 
 ### Footnotes
 
-<sup>1</sup>You can find the [manifest file here](data/manifest.json)
+<sup>1</sup>You can find the [manifest file here](data/manifest.json). [Direct link](https://raw.githubusercontent.com/Learnfield-GmbH/CodingChallenge/master/react%20native/simple%20audio%20player/data/manifest.json)
 
 <sup>2</sup>Update the value at an appropriate frequency
 
