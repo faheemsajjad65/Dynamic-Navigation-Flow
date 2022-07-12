@@ -3,7 +3,7 @@
 ## The following rules apply to all tests:
 
 - Supply clean code (e.g. SOLID principles, etc)
-- Supply clean architecture
+- Supply a scaleable, clean architecture
 - Supply clean, readable automated testing
   - Definitely unit and potentially other test layers you consider useful
 - Supply build / make / run instructions if required
