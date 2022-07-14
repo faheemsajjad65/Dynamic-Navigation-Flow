@@ -27,6 +27,7 @@ The application is able to load data from a server and playback the associated a
 - It is recommended to start the development of the mobile application with appropriate components being hidden behind an abstraction layer and firstly being implemented by a simple, configurable, local mock. (E.g. The network connectivity. Once all functionality is verified with this non-networking implementation, the real network implementation can be added.)
 - In case you introduce abstractions and temporar mocks, please preserve both implementations.
 - Reuse components wherever applicable.
+- You can find some assets in the `assets` folder.
 
 ### Footnotes
 
