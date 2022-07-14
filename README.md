@@ -12,6 +12,7 @@
 ## The Native (Swift/ObjC or Kotlin/Java) challenges
 
 1. [Sequencer](native/sequencer/README.md)
+1. [Simple Audio Player](shared/simple%20audio%20player/README.md)
 2. [Dynamic Navigation Flow](native/navigation%20flow/README.md)
 
 ## The React Native challenges
