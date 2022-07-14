@@ -44,7 +44,7 @@ server.listen(3000, () => {
 // Resolving helper
 function processRequest(type, result, delayOverride, successOverride, successBlock) {
   const delaySeconds = (typeof delayOverride === 'string') ? parseInt(delayOverride) : getRandomInt(16);
-  const success = (typeof successOverride === 'string') ? (successOverride === 'true' ? true : false) : getRandomInt(1) === 1;
+  const success = (typeof successOverride === 'string') ? (successOverride === 'true' ? true : false) : getRandomInt(2);
   console.log(`==> Handling '${type}' with delay of '${delaySeconds}' seconds and success '${success ? 'true' : 'false'}'`)
   setTimeout(() => {
     if (success) {
