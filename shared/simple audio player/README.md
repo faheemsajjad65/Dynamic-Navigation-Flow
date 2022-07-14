@@ -22,6 +22,12 @@ The application is able to load data from a server and playback the associated a
    - The interactive rating element displayed as stars. Rating can be set here
    - The interactive favorite element to set the song as a favorite. (As above, there can only be one favorite set. As soon as a song is set as favorite, all others are set to non-favorite) 
 
+### Tips
+
+- It is recommended to start the development of the mobile application with appropriate components being hidden behind an abstraction layer and firstly being implemented by a simple, configurable, local mock. (E.g. The network connectivity. Once all functionality is verified with this non-networking implementation, the real network implementation can be added.)
+- In case you introduce abstractions and temporar mocks, please preserve both implementations.
+- Reuse components wherever applicable.
+
 ### Footnotes
 
 <sup>1</sup>You can find the [manifest file here](data/manifest.json). [Direct link](https://raw.githubusercontent.com/Learnfield-GmbH/CodingChallenge/master/react%20native/simple%20audio%20player/data/manifest.json)
