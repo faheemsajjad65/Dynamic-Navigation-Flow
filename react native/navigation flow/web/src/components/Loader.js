@@ -3,8 +3,8 @@ import React from 'react'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { TailSpin } from  'react-loader-spinner'
 
-export default function Loader() {
+export default function Loader({color}) {
   return (
-    <TailSpin color="#00BFFF" height={80} width={80} />
+    <TailSpin color={color} height={60} width={60} />
   )
 }

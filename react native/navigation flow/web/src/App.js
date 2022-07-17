@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { StylesProvider } from '@material-ui/core/styles';
+
 import StoreProvider from './store/StoreProvider';
 import { gettingLogedIn } from './actions/auth'
 import ScreenA from './views/ScreenA';
@@ -19,14 +21,16 @@ function DynamicNavigationFlow (){
         return <ScreenA />
 
     return (
-        <div>Logedin...</div>
+        <div>Please wait...</div>
     )
   }
   
 function App() {
     return (
         <StoreProvider>
-            <DynamicNavigationFlow />
+            <StylesProvider injectFirst>
+                <DynamicNavigationFlow />
+            </StylesProvider>
         </StoreProvider>
     );
 }

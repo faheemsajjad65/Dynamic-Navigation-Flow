@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
+import { 
+    Box,
+    Typography,
+    Button,
+    Container
+  } from '@mui/material';
+  
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+  
+
 import Loader from '../components/Loader';
 
 import { getExperiments } from '../actions/experiments.js'
@@ -38,15 +49,29 @@ export default function ScreenA() {
     }
 
     return (
-      <div>
-        {
-            !showLoader ? (
-                <>
-                    <h1>Screen A</h1>  
-                    <input type="button" onClick={experimentsHandler} value="Submit"/>
-                </>
-            ) : <Loader />
-        }
-      </div>
+        <Box 
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+                width: 412,
+                height: 700,
+                backgroundColor: '#97d077'
+            }}
+        >
+            <Container maxWidth="sm" style={{textAlign:'center'}}>
+            {
+                !showLoader ? (
+                    <>
+                        <Typography variant="h4" style={{color:'white'}} mb={5}>
+                            Screen A
+                        </Typography>
+                        
+                        <Button variant="contained" onClick={experimentsHandler}   startIcon={<ArrowForwardIosIcon />}> Next </Button>
+                    </>
+                ) : <Loader color="white" />
+            }
+            </Container>
+        </Box>
   )
 }
