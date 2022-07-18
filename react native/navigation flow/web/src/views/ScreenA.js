@@ -22,7 +22,11 @@ import ScreenC2 from './ScreenC2';
 export default function ScreenA() {
     
     const dispatch = useDispatch();
+
+    // custom hook for loader
     const [showLoader , setShowLoader]  = useState(false)
+
+    // custom hook for next screen
     const [nextScreen, setNextScreen] = useState("");
 
     const experimentsHandler = () => {

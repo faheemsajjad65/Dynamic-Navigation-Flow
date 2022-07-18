@@ -13,10 +13,13 @@ function DynamicNavigationFlow (){
     const dispatch = useDispatch();
     const { sessionId } = useSelector((state)=> state.auth)
 
+    // Everytime user lands on it , need to loged in the user
     useEffect( () => {
+        // update store with session id in it
         dispatch(gettingLogedIn())
     },[])
 
+    // if user is loged in successfully then load screen A
     if(sessionId)
         return <ScreenA />
 
@@ -27,8 +30,11 @@ function DynamicNavigationFlow (){
   
 function App() {
     return (
+        // using Redux store in order to save sessionID
         <StoreProvider>
+            {/* for material UI */}
             <StylesProvider injectFirst>
+                {/* Main application templates and content */}
                 <DynamicNavigationFlow />
             </StylesProvider>
         </StoreProvider>
